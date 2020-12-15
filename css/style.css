@@ -258,7 +258,7 @@ nav > ul > li {
         transition: 1s;
     }
     .header_profile {
-
+        margin: 20px 32px 20px 32px;
     }
     .experience_title {
 
@@ -275,7 +275,7 @@ nav > ul > li {
         flex-direction: column;
     }
     .myName {
-        margin-top: 50px;
+        margin: 40px 32px 0;
         font-size: 30px;
         text-transform: uppercase;
         color: #2a0000;
