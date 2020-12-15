@@ -1,23 +1,30 @@
 const mobileButton = document.querySelector('.header_mobileButton');
 const closeAside = document.querySelector('.closeAside');
 const aside = document.querySelector('.aside');
+const main_content = document.querySelector('.main')
 
 const showUserInformation = () => {
     // aside.style.position = 'unset';
     aside.style.display = 'flex';
-    aside.style.width = '100%';
-    aside.style.height = '100vh';
+    aside.style.width = '100vw';
+    aside.style.height = '100%';
     aside.style.zIndex = '1';
+    main_content.style.display = 'none'
 }
 const closeUserInformation = () => {
     aside.style.display = 'none';
+    main_content.style.display = 'flex'
 }
 
 const setAsideStyleToDesktop = () => {
-    if(window.innerWidth > 960) {
+    if(window.innerWidth > 978) {
         aside.style.display = 'flex';
         aside.style.width = '20%';
         aside.style.zIndex = '0';
+    } else {
+        aside.style.display = 'none';
+        aside.style.width = '100vw';
+        aside.style.zIndex = '1';
     }
 }
 mobileButton.addEventListener('click', showUserInformation)

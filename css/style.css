@@ -25,10 +25,15 @@ nav > ul > li {
     flex-direction: row;
     margin: 0 auto;
 }
+.cv_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .main {
-    position: absolute;
-    right: 0;
-    top: 0;
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 0;*/
     display: flex;
     margin: 0 auto;
     width: 80%;
@@ -126,26 +131,28 @@ nav > ul > li {
     line-height: 1.5;
 }
 .aside {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
+    justify-items: flex-start;
     flex-direction: column;
     width: 20%;
     /*background-color: #023d57;*/
     background-color: #2a0000;
     padding: 10px 20px;
-    height: 100vh;
+    height: 100%;
     color: #dbdee0;
 }
 .aside_photo--container {
    margin: 20px auto 0 auto;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1280px) {
     .aside {
         display: none;
         height: auto;
+        width: 100%;
         transition: 1s;
     }
     .main {
@@ -159,6 +166,12 @@ nav > ul > li {
     }
 }
 @media screen and (max-width: 478px) {
+    .aside {
+        display: none;
+        height: auto;
+        width: 100%;
+        transition: 1s;
+    }
     .row {
         display: flex;
         justify-content: center;
