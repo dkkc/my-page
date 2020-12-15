@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Roboto+Condensed:wght@300;400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #9ec1ee;
+}
+nav > ul > li {
+    padding: 20px 30px;
+    display: inline-block;
+    list-style-type: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.main {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    background-color: #f8f8f8;
+    font-family: 'Montserrat', sans-serif;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+}
+.header_mobileButton {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    display: none;
+    text-decoration: none;
+    color: #2a0000;
+    font-weight: bold;
+    font-size: 28px;
+}
+.closeAside {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    display: none;
+    text-decoration: none;
+    /*color: #2a0000;*/
+    font-weight: bold;
+    font-size: 28px;
+   color:  #dbdee0;
+}
+.divider {
+    margin-top: 40px;
+    border: 2px solid #919292;
+}
+.experience_divider {
+    margin: 22px 0 30px 0;
+    border: 1px solid #c6c9c9;
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 32px 20px 32px;
+    margin: 12px 0 12px 0;
+    width: 100%;
+    /*background-color: rgba(2,61,87,0.1);*/
+    background-color: #fff;
+    box-shadow: 3px 2px 2px rgba(0,0,0,0.4);
+    border-radius: 4px;
+}
+.main_content {
+    width: 100%;
+    margin: 0 32px 0 32px;
+    color: #2a0000;
+}
+.header_name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 36px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+.myName {
+    margin-left: 50px;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #2a0000;
+}
+.header_profile {
+    margin:20px 0 0 50px;
+    width: 80%;
+}
+.experience {
+    margin-top: 60px;
+}
+.user_experience {
+    width: 100%;
+}
+.experience_title {
+    font-size: 30px;
+}
+.experience_role {
+    margin-bottom: 2px;
+}
+.experience_duration {
+    width: auto;
+    font-weight: 600    ;
+}
+.experience_description {
+    margin-top: 18px;
+    width: 88%;
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+}
+.aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    /*background-color: #023d57;*/
+    background-color: #2a0000;
+    padding: 10px 20px;
+    height: 100vh;
+    color: #dbdee0;
+}
+.aside_photo--container {
+   margin: 20px auto 0 auto;
+}
+@media screen and (max-width: 960px) {
+    .aside {
+        display: none;
+        height: auto;
+        transition: 1s;
+    }
+    .main {
+        width: 100%
+    }
+    .experience_description {
+        width: 100%;
+    }
+    .header_mobileButton, .closeAside {
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 478px) {
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+    .experience_description {
+
+    }
+    .user_image {
+        width: 150px;
+        height: 150px;
+    }
+}
+.user_image {
+    /*background-image: url('../assets/dk.jpg');*/
+    background-image: url('../assets/Background.png');
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-position: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%
+}
+.aside_photo--myPhoto {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+.personal_data {
+    margin-top: 54px;
+    font-size: 30px;
+}
+.aside_divider {
+    margin: 20px 0 20px 0;
+    width: 100%;
+    border: 1px solid #dbdee0;
+}
+.user_row, .aside_name {
+    margin-top: 12px;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.user_row--personalData {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+.user_row--icon {
+    margin-right: 5px;
+}
+.aside_name {
+    font-size: 18px;
+}
+.user_row--email {
+    text-decoration: none;
+    font-weight: 700;
+    color: #dbdee0;
+}
+.user_row--email:hover {
+    text-decoration: underline;
+}
+.aside footer {
+}
+.icon {
+    color: #dbdee0;
+    font-size: 36px;
+    cursor: pointer;
+    margin:10px 20px;
+}
+.icon:hover {
+    background-color: #dbdee0;
+    color: #1a1313;
+    transition: 0.4s;
+}
+.user_row, .aside_personal--data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+.user_row {
+
+}
+.aside_personal--data {
+
+}
+.aside_user--name {
+    font-size: 16px;
+}
+
