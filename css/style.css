@@ -76,7 +76,7 @@ nav > ul > li {
 }
 .row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px 32px 20px 32px;
     margin: 12px 0 12px 0;
     width: 100%;
@@ -92,8 +92,8 @@ nav > ul > li {
 }
 .header_name {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     margin-top: 36px;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
@@ -120,6 +120,11 @@ nav > ul > li {
 .experience_role {
     margin-bottom: 2px;
 }
+.experience_company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .experience_duration {
     width: auto;
     font-weight: 600    ;
@@ -139,7 +144,6 @@ nav > ul > li {
     justify-items: flex-start;
     flex-direction: column;
     width: 20%;
-    /*background-color: #023d57;*/
     background-color: #2a0000;
     padding: 10px 20px;
     height: 100%;
@@ -148,15 +152,18 @@ nav > ul > li {
 .aside_photo--container {
    margin: 20px auto 0 auto;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
     .aside {
         display: none;
-        height: auto;
         width: 100%;
         transition: 1s;
     }
     .main {
         width: 100%
+    }
+    .experience_title {
+        margin-left: 32px;
+        margin-top: -20px;
     }
     .experience_description {
         width: 100%;
@@ -165,25 +172,7 @@ nav > ul > li {
         display: inline-block;
     }
 }
-@media screen and (max-width: 478px) {
-    .aside {
-        display: none;
-        height: auto;
-        width: 100%;
-        transition: 1s;
-    }
-    .row {
-        display: flex;
-        justify-content: center;
-    }
-    .experience_description {
 
-    }
-    .user_image {
-        width: 150px;
-        height: 150px;
-    }
-}
 .user_image {
     /*background-image: url('../assets/dk.jpg');*/
     background-image: url('../assets/Background.png');
@@ -261,4 +250,38 @@ nav > ul > li {
 .aside_user--name {
     font-size: 16px;
 }
+@media screen and (max-width: 478px) {
+    .aside {
+        display: none;
+        height: 100%;
+        width: 100%;
+        transition: 1s;
+    }
+    .header_profile {
 
+    }
+    .experience_title {
+
+    }
+    .experience_company {
+        flex-direction: column;
+    }
+    .experience_duration {
+        margin: 4px 0 2px 0;
+    }
+    .row {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .myName {
+        margin-top: 50px;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #2a0000;
+    }
+    .user_image {
+        width: 150px;
+        height: 150px;
+    }
+}
