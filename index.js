@@ -24,15 +24,14 @@ window.onload = () => {
         console.log(window)
         const cvData = document.querySelector('.cv_content');
         console.log(cvData)
-        var opt = {
-            margin: 1,
-            filename: 'myfile.pdf',
+        const opt = {
+            margin: 0,
+            filename: 'Dariusz Kowalec.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 1 },
-            jsPDF: { unit: 'in', format: 'A2', orientation: 'portrait' }
+            jsPDF: { format: 'A2', orientation: 'portrait' }
         };
         html2pdf(cvData, opt);
-        // html2pdf().from(cvData).set(opt);
     })
 }
 mobileButton.addEventListener('click', showUserInformation)
