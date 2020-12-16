@@ -17,6 +17,24 @@ const closeUserInformation = () => {
         main_content.style.display = 'flex'
     }
 }
+
+window.onload = () => {
+    document.body.addEventListener('click', ()=> {
+        console.log('click')
+        console.log(window)
+        const cvData = document.querySelector('.cv_content');
+        console.log(cvData)
+        var opt = {
+            margin: 1,
+            filename: 'myfile.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 1 },
+            jsPDF: { unit: 'in', format: 'A2', orientation: 'portrait' }
+        };
+        html2pdf(cvData, opt);
+        // html2pdf().from(cvData).set(opt);
+    })
+}
 mobileButton.addEventListener('click', showUserInformation)
 closeAside.addEventListener('click', closeUserInformation)
 
