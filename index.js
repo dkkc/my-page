@@ -18,20 +18,17 @@ const closeUserInformation = () => {
         main_content.style.display = 'flex'
     }
 }
-
-window.onload = () => {
     download_cv.addEventListener('click', ()=> {
         const cvData = document.querySelector('.cv_content');
         const opt = {
             margin: 0,
-            filename: 'Dariusz Kowalec.pdf',
+            filename: 'Dariusz Kowalec CV.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 1 },
             jsPDF: { format: 'A2', orientation: 'portrait' }
         };
         html2pdf(cvData, opt);
     })
-}
 mobileButton.addEventListener('click', showUserInformation)
 closeAside.addEventListener('click', closeUserInformation)
 
