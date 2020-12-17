@@ -2,6 +2,7 @@ const mobileButton = document.querySelector('.header_mobileButton');
 const closeAside = document.querySelector('.closeAside');
 const aside = document.querySelector('.aside');
 const main_content = document.querySelector('.main')
+const download_cv = document.querySelector('.download');
 
 const showUserInformation = () => {
     if (aside.style.display === '' || aside.style.display === 'none' ){
@@ -19,11 +20,8 @@ const closeUserInformation = () => {
 }
 
 window.onload = () => {
-    document.body.addEventListener('click', ()=> {
-        console.log('click')
-        console.log(window)
+    download_cv.addEventListener('click', ()=> {
         const cvData = document.querySelector('.cv_content');
-        console.log(cvData)
         const opt = {
             margin: 0,
             filename: 'Dariusz Kowalec.pdf',
