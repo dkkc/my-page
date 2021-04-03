@@ -40,12 +40,15 @@ nav > ul > li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
 }
 .main {
+    position: absolute;
+    right: 0;
+    top: 0;
     display: flex;
     margin: 0 auto;
     width: 80%;
-    height: auto;
     background-color: #f8f8f8;
     font-family: 'Montserrat', sans-serif;
 }
@@ -96,7 +99,7 @@ nav > ul > li {
 .main_content {
     width: 100%;
     margin: 0 32px 0 32px;
-    color: #2a0000;
+    color: #151515;
 }
 .header_name {
     display: flex;
@@ -140,25 +143,25 @@ nav > ul > li {
 .experience_description {
     margin-top: 18px;
     width: 88%;
-    letter-spacing: 0.8px;
+    /*letter-spacing: 0.8px;*/
     line-height: 1.5;
 }
 .aside {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-items: flex-start;
     flex-direction: column;
+    height: 100%;
     width: 20%;
-    background-color: #2a0000;
+    background-color: #151515;
     padding: 10px 20px;
-    height: 100vw;
     color: #dbdee0;
 }
 .aside_photo--container {
-   margin: 20px auto 0 auto;
+   margin: 100px auto 0 auto;
 }
 @media screen and (max-width: 1024px) {
     .nav {
