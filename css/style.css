@@ -161,7 +161,7 @@ nav > ul > li {
     color: #dbdee0;
 }
 .aside_photo--container {
-   margin: 10px auto 0 auto;
+   margin: 40px auto 0 auto;
 }
 @media screen and (max-width: 1024px) {
     .nav {
