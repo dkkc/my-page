@@ -5,6 +5,7 @@ const main_content = document.querySelector('.main')
 const download_cv = document.querySelector('.download');
 
 const showUserInformation = () => {
+	console.log('click');
     if (aside.style.display === '' || aside.style.display === 'none' ){
         aside.style.display = 'flex';
         aside.style.width = '100vw';
@@ -29,7 +30,10 @@ const closeUserInformation = () => {
         };
         html2pdf(cvData, opt);
     })
-mobileButton.addEventListener('click', showUserInformation)
+// mobileButton.addEventListener('click', showUserInformation)
+mobileButton.addEventListener('click', ()=> {
+	console.log('click');
+})
 closeAside.addEventListener('click', closeUserInformation)
 
 

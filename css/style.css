@@ -171,6 +171,9 @@ nav > ul > li {
         margin: 0 auto;
     }
     .aside {
+        position: absolute;
+        top: 0;
+        left: 0;
         display: none;
         width: 100%;
         transition: 1s;
