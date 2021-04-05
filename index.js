@@ -48,8 +48,22 @@ const jobDuration = (obj) => {
 	const months = Math.floor(days / 30 ) % 12
 	const years = Math.floor((days / 365));
 	
-	const yearsDuration = years > 1 ? 'lat': 'rok';
-	const monthsDuration = months > 1 ? 'miesiące' : 'miesiąc'
+	let yearsDuration = '';
+	if(years === 1) {
+			yearsDuration= 'rok';
+	} else if(years >= 2 && years < 5) {
+		yearsDuration = 'lata';
+	} else{
+		yearsDuration = 'lat';
+	}
+	let monthsDuration = '';
+	if(months === 1) {
+			monthsDuration = 'miesiąc';
+	} else if( months >=2 && months < 5) {
+		monthsDuration = 'miesiące'
+	} else {
+		monthsDuration = 'miesięcy'
+	}
 	let periodText = '';
 	if(obj.dateTo === '') {
 		return periodText;
