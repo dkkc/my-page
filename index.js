@@ -3,6 +3,63 @@ const closeAside = document.querySelector('.closeAside');
 const aside = document.querySelector('.aside');
 const main_content = document.querySelector('.main')
 const download_cv = document.querySelector('.download');
+const internship = document.getElementById('internship')
+const eDateFrom = document.getElementById('e-date-from');
+const eDateTo = document.getElementById('e-date-to');
+const eDuration = document.getElementById('e-duration');
+const nDuration = document.getElementById('n-duration');
+const rDuration = document.getElementById('r-duration');
+const tDuration = document.getElementById('t-duration');
+
+
+const	ekslibrisNet = {
+		dateFrom: new Date('2019-10-01'),
+		dateTo: new Date('2021-01-31'),
+	}
+
+const terg = {
+	dateFrom: new Date('2021-02-01'),
+	dateTo: new Date('2021-04-30'),
+}
+
+const newCold = {
+	dateFrom: new Date('2016-09-15'),
+	dateTo: new Date('2019-09-30'),
+}
+const raben = {
+	dateFrom: new Date('2000-06-20'),
+	dateTo: new Date('2016-06-30'),
+}
+
+// const diff = ekslibrisNet.dateTo.getTime() - ekslibrisNet.dateFrom.getTime();
+// const day = (1000 * 60 * 60 * 24);
+// const days = Math.floor(diff / day)
+// const months = Math.floor(days / 31) % 12
+// const years = Math.floor((days / 31/ 12) % 12)
+
+
+const jobDuration = (obj) => {
+	const now = new Date();
+	const trialPeriod = now < obj.dateTo;
+	const diff = obj.dateTo.getTime() - obj.dateFrom.getTime();
+	const day = (1000 * 60 * 60 * 24);
+	const days = Math.floor(diff / day)
+	console.log(days);
+	const months = Math.floor(days / 30 ) % 12
+	const years = Math.floor((days / 365));
+	
+	const yearsDuration = years > 1 ? 'lat': 'rok';
+	const monthsDuration = months > 1 ? 'miesiące' : 'miesiąc'
+	let periodText = '';
+	if(obj.dateTo === '') {
+		return periodText;
+	}
+	return trialPeriod ? periodText = '( Obecnie na okresie próbnym )' : periodText =  `( ${years} ${yearsDuration} i ${months} ${monthsDuration} )`
+}
+eDuration.innerText = jobDuration(ekslibrisNet)
+nDuration.innerText = jobDuration(newCold)
+rDuration.innerText = jobDuration(raben)
+tDuration.innerText = jobDuration(terg)
 
 const showUserInformation = () => {
 	console.log('click');
@@ -19,17 +76,17 @@ const closeUserInformation = () => {
         main_content.style.display = 'flex'
     }
 }
-    download_cv.addEventListener('click', ()=> {
-        const cvData = document.querySelector('.cv_content');
-        const opt = {
-            margin: 0,
-            filename: 'Dariusz Kowalec CV.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 1 },
-            jsPDF: { format: 'A2', orientation: 'portrait' }
-        };
-        html2pdf(cvData, opt);
-    })
+    // download_cv.addEventListener('click', ()=> {
+    //     const cvData = document.querySelector('.cv_content');
+    //     const opt = {
+    //         margin: 0,
+    //         filename: 'Dariusz Kowalec CV.pdf',
+    //         image: { type: 'jpeg', quality: 0.98 },
+    //         html2canvas: { scale: 1 },
+    //         jsPDF: { format: 'A2', orientation: 'portrait' }
+    //     };
+    //     html2pdf(cvData, opt);
+    // })
 // mobileButton.addEventListener('click', showUserInformation)
 mobileButton.addEventListener('click', ()=> {
 	console.log('click');

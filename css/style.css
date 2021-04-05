@@ -163,6 +163,9 @@ nav > ul > li {
 .aside_photo--container {
    margin: 40px auto 0 auto;
 }
+#e-duration, #n-duration, #r-duration, #t-duration {
+    font-weight: normal;
+}
 @media screen and (max-width: 1024px) {
     .nav {
         display: none;
